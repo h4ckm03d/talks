@@ -1,0 +1,49 @@
+go BackEndWar();
+
+DevC Meetup - 26 Nov 2017
+
+Moch. Lutfi
+kbse.com.my
+kapten.lufi@gmail.com
+https://lumochift.org
+
+
+Tags: go, golang, backend war, overview
+
+* History
+- 2007 Kenalan
+- 2009 Jadian
+- Sekarang, nikah? :v
+.play src/hello.go   
+
+* Feature Overview
+- Small and powerful standard library
+- Garbage collected
+- Statically compile (or cross-compile!) and deploy almost anywhere
+- Super-fast compiles and single binary deploys
+- Language/standard library are UTF-8 native
+- Design and behavior of language/standard library is opinionated
+- Since v1.5, compiler toolchain is written in Go
+- Built in unit testing and benchmark
+- Easy integration with C code/libraries
+- Less-is-more!
+
+* Package Management
+- Go codes grouped as "packages" in $GOPATH
+    $ ls $GOPATH
+      pkg src bin
+- $GOPATH directory layout
+    $GOPATH/src/X/Y/Z
+- Packages can be retrieved via go get
+    $ go get -u github.com/spf13/viper
+    X/Y/Z
+    X: github.com (can be any code version system)
+    Y: spf13
+    Z: viper
+- Local dependency with isolated environtment
+    set GO15VENDOREXPERIMENT=1
+    Use dep, govendor, godep, etc
+
+* Developer Experience
+
+* GopherMalangMeetup := nil
