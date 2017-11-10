@@ -6,6 +6,12 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "7EZyXN0EmZLgGxZxK01IJua4c8o=",
+			"path": "golang.org/x/net/websocket",
+			"revision": "a337091b0525af65de94df2eb7e98bd9962dcbe2",
+			"revisionTime": "2016-10-09T20:39:03Z"
+		},
+		{
 			"checksumSHA1": "uWa1A7L+4BTV4GgVrYOkga1hqaY=",
 			"path": "golang.org/x/tools/godoc/static",
 			"revision": "05e91d06384e3a4eb0aba75560d254b8d5a7b431",
