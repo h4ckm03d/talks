@@ -8,9 +8,9 @@ import (
 )
 
 func main() {
-
-	present := path.Join(os.Getenv("GOPATH"), "present")
+	present := path.Join(os.Getenv("GOPATH"), "bin", "present")
 	cmd := exec.Command(present, os.Args...)
+	cmd.Dir = "./slides"
 	cmd.Stderr = os.Stderr
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout
