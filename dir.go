@@ -141,7 +141,7 @@ func dirList(w io.Writer, name string) (isDir bool, err error) {
 	d := &dirListData{Path: name}
 	for _, fi := range fis {
 		// skip the golang.org directory
-		if name == "." && (fi.Name() == "golang.org" || fi.Name() =="static" ||fi.Name() == "templates" ||fi.Name() == "vendor") {
+		if name == "." && (fi.Name() == "golang.org" || fi.Name() =="static" ||fi.Name() == "templates" ||fi.Name() == "vendor" || fi.Name() == "bin") {
 			continue
 		}
 		e := dirEntry{
