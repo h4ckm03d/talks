@@ -54,4 +54,4 @@ the generated output. The supported formats are:
 The present file format is documented by the present package:
 http://godoc.org/github.com/h4ckm03d/talks
 */
-package main // import "golang.org/x/tools/cmd/present"
+package main // import "github.com/h4ckm03d/talks"

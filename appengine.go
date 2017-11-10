@@ -9,7 +9,7 @@ package main
 import (
 	"mime"
 
-	"github.com/h4ckm03d/talks"
+	"golang.org/x/tools/present"
 )
 
 func init() {

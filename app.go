@@ -17,10 +17,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/h4ckm03d/talks"
+	"golang.org/x/tools/present"
 )
 
-const basePkg = "github.com/h4ckm03d/talks"
+const basePkg = "golang.org/x/tools/present"
 
 var (
 	httpAddr     = flag.String("http", "127.0.0.1:3999", "HTTP service address (e.g., '127.0.0.1:3999')")
@@ -30,8 +30,8 @@ var (
 )
 
 func main() {
-	flag.BoolVar(&talks.PlayEnabled, "play", true, "enable playground (permit execution of arbitrary user code)")
-	flag.BoolVar(&talks.NotesEnabled, "notes", false, "enable presenter notes (press 'N' from the browser to display them)")
+	flag.BoolVar(&present.PlayEnabled, "play", true, "enable playground (permit execution of arbitrary user code)")
+	flag.BoolVar(&present.NotesEnabled, "notes", false, "enable presenter notes (press 'N' from the browser to display them)")
 	flag.Parse()
 
 	if *basePath == "" {
@@ -81,12 +81,12 @@ func main() {
 	http.Handle("/static/", http.FileServer(http.Dir(*basePath)))
 
 	if !ln.Addr().(*net.TCPAddr).IP.IsLoopback() &&
-		talks.PlayEnabled && !*nativeClient {
+		present.PlayEnabled && !*nativeClient {
 		log.Print(localhostWarning)
 	}
 
 	log.Printf("Open your web browser and visit %s", origin.String())
-	if talks.NotesEnabled {
+	if present.NotesEnabled {
 		log.Println("Notes are enabled, press 'N' from the browser to display them.")
 	}
 	log.Fatal(http.Serve(ln, nil))
