@@ -1,1 +1,1 @@
-web: present -play -orighost dev.cassavahq.com
+cmd: present -base slides -host dev.cassavahq.com -play -orighost dev.cassavahq.com
