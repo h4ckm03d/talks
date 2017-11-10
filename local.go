@@ -17,10 +17,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/h4ckm03d/talks/present"
+	"github.com/h4ckm03d/talks"
 )
 
-const basePkg = "golang.org/x/tools/cmd/present"
+const basePkg = "github.com/h4ckm03d/talks"
 
 var (
 	httpAddr     = flag.String("http", "127.0.0.1:3999", "HTTP service address (e.g., '127.0.0.1:3999')")

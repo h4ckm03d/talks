@@ -1,8 +1,7 @@
 {
 	"comment": "",
 	"heroku": {
-		"goVersion": "go1.9.2",
-		"install":["./..","./present"]
+		"goVersion": "go1.9.2"
 	},
 	"ignore": "test",
 	"rootPath": "github.com/h4ckm03d/talks"
