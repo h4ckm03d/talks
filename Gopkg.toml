@@ -26,5 +26,5 @@
   name = "golang.org/x/tools"
 
 [metadata.heroku]
-  root-package = "github.com/h4ckm03d/present"
+  root-package = "github.com/h4ckm03d/talks"
   go-version = "go1.9.2"
