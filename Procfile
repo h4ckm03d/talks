@@ -1,1 +1,1 @@
-web: talks -http dev.cassavahq.com -play -orighost dev.cassavahq.com
+web: go get golang.org/x/tools/cmd/present && talks -http dev.cassavahq.com -play -orighost dev.cassavahq.com
