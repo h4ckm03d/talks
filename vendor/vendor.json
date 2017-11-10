@@ -4,6 +4,13 @@
 		"goVersion": "go1.9.2"
 	},
 	"ignore": "test",
-	"package": [],
+	"package": [
+		{
+			"checksumSHA1": "rxg3RdP5VuODWgLgTMcGHiINuD0=",
+			"path": "golang.org/x/tools/present",
+			"revision": "05e91d06384e3a4eb0aba75560d254b8d5a7b431",
+			"revisionTime": "2017-11-07T22:44:15Z"
+		}
+	],
 	"rootPath": "github.com/h4ckm03d/talks"
 }
