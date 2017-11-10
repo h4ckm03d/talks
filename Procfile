@@ -1,1 +1,1 @@
-web: talks -base . -http dev.cassavahq.com:3999 -play -orighost dev.cassavahq.com
+web: talks -base . -play -orighost dev.cassavahq.com
