@@ -7,9 +7,6 @@ import (
 	"path"
 )
 
-const basePkg = "github.com/h4ckm03d/talks"
-const basePathMessage = `Run 'go get %q'`
-
 func main() {
 
 	present := path.Join(os.Getenv("GOPATH"), "present")
