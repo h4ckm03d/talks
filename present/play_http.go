@@ -9,7 +9,7 @@ package main
 import (
 	"net/url"
 
-	"golang.org/x/tools/present"
+	"github.com/h4ckm03d/talks/present"
 
 	_ "golang.org/x/tools/playground"
 )

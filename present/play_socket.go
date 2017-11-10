@@ -12,7 +12,7 @@ import (
 	"runtime"
 
 	"golang.org/x/tools/playground/socket"
-	"golang.org/x/tools/present"
+	"github.com/h4ckm03d/talks/present"
 )
 
 func initPlayground(basepath string, origin *url.URL) {

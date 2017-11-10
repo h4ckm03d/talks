@@ -17,7 +17,7 @@ import (
 	"os"
 	"strings"
 
-	"golang.org/x/tools/present"
+	"github.com/h4ckm03d/talks/present"
 )
 
 const basePkg = "golang.org/x/tools/cmd/present"
