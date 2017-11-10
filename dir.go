@@ -164,7 +164,7 @@ func dirList(w io.Writer, name string) (isDir bool, err error) {
 			case ".slide":
 				d.Slides = append(d.Slides, e)
 			}
-		} else if showFile(e.Name) {
+		} else if showFile(e.Name) && name !="."{
 			d.Other = append(d.Other, e)
 		}
 	}
