@@ -2,7 +2,7 @@
 	"comment": "",
 	"heroku": {
 		"goVersion": "go1.9.2",
-		"install":["./..","golang.org/x/tools/present"]
+		"install":["github.com/h4ckm03d/talks","golang.org/x/tools/present"]
 	},
 	"ignore": "test",
 	"package": [
