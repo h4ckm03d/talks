@@ -6,14 +6,14 @@
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "S6rKiYcjfCcLaGdaTjvDKzSqkVI=",
-			"path": "golang.org/x/tools/godoc",
+			"checksumSHA1": "uWa1A7L+4BTV4GgVrYOkga1hqaY=",
+			"path": "golang.org/x/tools/godoc/static",
 			"revision": "05e91d06384e3a4eb0aba75560d254b8d5a7b431",
 			"revisionTime": "2017-11-07T22:44:15Z"
 		},
 		{
-			"checksumSHA1": "aABw7/EtoAV9xecWkc8ZJdcFh8U=",
-			"path": "golang.org/x/tools/playground",
+			"checksumSHA1": "TAt4W/Bla7zteCauC1Nd9u6dY9s=",
+			"path": "golang.org/x/tools/playground/socket",
 			"revision": "05e91d06384e3a4eb0aba75560d254b8d5a7b431",
 			"revisionTime": "2017-11-07T22:44:15Z"
 		},
