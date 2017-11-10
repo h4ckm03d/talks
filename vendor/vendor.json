@@ -1,7 +1,8 @@
 {
 	"comment": "",
 	"heroku": {
-		"goVersion": "go1.9.2"
+		"goVersion": "go1.9.2",
+		"install":["golang.org/x/tools/present"]
 	},
 	"ignore": "test",
 	"package": [
