@@ -23,10 +23,11 @@ import (
 const basePkg = "golang.org/x/tools/present"
 
 var (
-	httpAddr     = flag.String("http", "127.0.0.1:3999", "HTTP service address (e.g., '127.0.0.1:3999')")
+	httpAddr     = flag.String("http", "127.0.0.1:5000", "HTTP service address (e.g., '127.0.0.1:5000')")
 	originHost   = flag.String("orighost", "", "host component of web origin URL (e.g., 'localhost')")
 	basePath     = flag.String("base", "", "base path for slide template and static resources")
 	nativeClient = flag.Bool("nacl", false, "use Native Client environment playground (prevents non-Go code execution)")
+	baseDir      = flag.String("dir", ".", "Base directory slides")
 )
 
 func main() {

@@ -1,1 +1,1 @@
-web: talks -base . -play -orighost dev.cassavahq.com
+web: talks -base . -play -orighost dev.cassavahq.com -dir ./slides/

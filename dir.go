@@ -27,8 +27,7 @@ func dirHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "not found", 404)
 		return
 	}
-	const base = "."
-	name := filepath.Join(base, r.URL.Path)
+	name := filepath.Join(*baseDir, r.URL.Path)
 	if isDoc(name) {
 		err := renderDoc(w, name)
 		if err != nil {
