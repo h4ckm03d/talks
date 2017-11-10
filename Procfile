@@ -1,1 +1,1 @@
-cmd: present -base slides -host dev.cassavahq.com -play -orighost dev.cassavahq.com
+worker: present -base slides -http dev.cassavahq.com -play -orighost dev.cassavahq.com
