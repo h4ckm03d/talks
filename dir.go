@@ -47,7 +47,7 @@ func dirHandler(w http.ResponseWriter, r *http.Request) {
 	} else if isDir {
 		return
 	}
-	http.FileServer(http.Dir(base)).ServeHTTP(w, r)
+	http.FileServer(http.Dir(*baseDir)).ServeHTTP(w, r)
 }
 
 func isDoc(path string) bool {
