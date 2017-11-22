@@ -10,9 +10,9 @@ https://lumochift.org
 Tags: go, golang, backend war, overview
 
 * History
-- 2007 Kenalan
-- 2009 Jadian
-- Sekarang, nikah? :v
+- 2007 Start
+- 2009 First Release
+- Now, 10 years of Go
 .play src/hello.go   
 
 * Feature Overview
@@ -43,6 +43,21 @@ Tags: go, golang, backend war, overview
     set GO15VENDOREXPERIMENT=1
     Use dep, govendor, godep, etc
 
+* Performance
+ - 
+
 * Developer Experience
+- Simple Language
+- Opinionated
+- Warning is an error
+
+
+* Who use go?
+- Google
+- Dropbox
+- Heroku
+- https://github.com/golang/go/wiki/GoUsers
+
+* Community
 
 * GopherMalangMeetup := nil
