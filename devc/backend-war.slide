@@ -1,0 +1,130 @@
+go BackEndWar();
+DevC Meetup, Nov. 26, 2017
+
+Moch. Lutfi
+kbse.com.my
+kapten.lufi@gmail.com
+https://lumochift.org
+
+
+Tags: go, golang, backend war, overview
+
+* History
+- 2007 Start
+.image 01-backend-war/img/mail.png _ 600
+- 2009 First Release
+.image 01-backend-war/img/tweet.png 200 _
+
+* History (con't)
+
+- 2012 Version 1
+.image 01-backend-war/img/go1-release.png 200 _
+- Now, 8 years of Go. Toward Go 2
+.play 01-backend-war/src/hello.go   
+
+* Feature Overview
+- Small and powerful standard library
+- Garbage collected
+- Statically compile (or cross-compile!) and deploy almost anywhere
+- Super-fast compiles and single binary deploys
+- Language/standard library are UTF-8 native
+- Design and behavior of language/standard library is opinionated
+- Since v1.5, compiler toolchain is written in Go
+- Built in unit testing and benchmark
+- Easy integration with C code/libraries
+- Less-is-more!
+
+* Package Management
+- Go codes grouped as "packages" in $GOPATH
+    $ ls $GOPATH
+      pkg src bin
+- $GOPATH directory layout
+    $GOPATH/src/X/Y/Z
+- Packages can be retrieved via go get
+    $ go get -u github.com/spf13/viper
+    X/Y/Z
+    X: github.com (can be any code version system)
+    Y: spf13
+    Z: viper
+- Local dependency with isolated environtment
+    set GO15VENDOREXPERIMENT=1
+    Use dep, govendor, godep, etc
+
+* Performance
+- https://github.com/smallnest/go-web-framework-benchmark
+    api.Get("/rest/hello", func(c \*XXXXX.Context) {  
+        sleepTime := strconv.Atoi(os.Args[1]) //10ms  
+        if sleepTime \> 0 {  
+            time.Sleep(time.Duration(sleepTime) \* time.Millisecond)  
+        }  
+        c.Text("Hello world")  
+    })
+
+
+* Performance
+.image 01-backend-war/img/benchmark.png _ 900
+
+* Performance (con't)
+.image 01-backend-war/img/1millionreq.png _ 900
+.link https://medium.com/smsjunk/handling-1-million-requests-per-minute-with-golang-f70ac505fcaa https://medium.com/smsjunk/handling-1-million-requests-per-minute-with-golang-f70ac505fcaa
+
+* Developer Experience
+- Simple Language
+- Opinionated
+- Warning is an error
+
+* No Exceptions
+    type Server struct {}
+
+    func main() {
+        err := s.Run()
+    }
+
+    func (s *Server) Run() (err error) {
+        http.HandleFunc("/", s.handleHomeRequest)
+        err = http.ListenAndServe(":4000", nil)
+        if err != nil {
+            return err
+        }
+        return nil
+    }
+
+* Defer
+
+.play 01-backend-war/src/defer.go  
+
+* Benchmark + testing
+- Test
+    func TestTimeConsuming(t *testing.T) {
+        if testing.Short() {
+            t.Skip("skipping test in short mode.")
+        }
+        ...
+    }
+- Benchmark
+    func BenchmarkHello(b *testing.B) {
+        for i := 0; i < b.N; i++ {
+            fmt.Sprintf("hello")
+        }
+    }
+
+* Meet chan
+.play 01-backend-war/src/channel.go
+
+* No... no... noo...
+- No classes. Everything is divided into packages. Go has only structs.
+- No support for inheritance. 
+- No Execeptions
+- No generics
+- No annotations
+- No constructors
+
+* Who use go?
+- Google
+- Dropbox
+- Heroku
+- https://github.com/golang/go/wiki/GoUsers
+
+* Community
+
+* GopherMalangMeetup := nil
