@@ -111,6 +111,9 @@ Tags: go, golang, backend war, overview
 * Meet chan
 .play 01-backend-war/src/channel.go
 
+* Pointer
+.play 01-backend-war/src/pointers.go
+
 * No... no... noo...
 - No classes. Everything is divided into packages. Go has only structs.
 - No support for inheritance. 
