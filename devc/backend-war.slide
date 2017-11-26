@@ -65,16 +65,31 @@ Tags: go, golang, backend war, overview
 
 
 * Performance
-.image 01-backend-war/img/benchmark.png _ 900
+- the concurrency clients are 5000.
+.image 01-backend-war/img/benchmark.png _ 800
 
-* Performance (con't)
+* Pipeline Performance
+.image 01-backend-war/img/benchmark-pipeline.png _ 800
+
+* Memory usage
+- Allocs is the heap allocations by web servers when test is running. The unit is MB. The smaller is the better.
+.image 01-backend-war/img/benchmark_alloc.png _ 800
+
+
+* Performance on real world
 .image 01-backend-war/img/1millionreq.png _ 900
 .link https://medium.com/smsjunk/handling-1-million-requests-per-minute-with-golang-f70ac505fcaa https://medium.com/smsjunk/handling-1-million-requests-per-minute-with-golang-f70ac505fcaa
 
 * Developer Experience
-- Simple Language
+- Simple Language (25 keywords)
 - Opinionated
 - Warning is an error
+- No classes. Everything is divided into packages. Go has only structs.
+- No support for inheritance. 
+- No Execeptions
+- No generics
+- No annotations
+- No constructors
 
 * No Exceptions
     type Server struct {}
@@ -116,14 +131,6 @@ Tags: go, golang, backend war, overview
 
 * Pointer
 .play 01-backend-war/src/pointers.go
-
-* No... no... noo...
-- No classes. Everything is divided into packages. Go has only structs.
-- No support for inheritance. 
-- No Execeptions
-- No generics
-- No annotations
-- No constructors
 
 * OOP
     type Animal struct {
