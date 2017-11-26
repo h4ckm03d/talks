@@ -9,6 +9,10 @@ https://lumochift.org
 
 Tags: go, golang, backend war, overview
 
+* Hello Gopher
+.play 01-backend-war/src/hello.go   
+.image 01-backend-war/img/gopher25.png 350 _
+
 * History
 - 2007 Start
 .image 01-backend-war/img/mail.png _ 600
@@ -20,7 +24,6 @@ Tags: go, golang, backend war, overview
 - 2012 Version 1
 .image 01-backend-war/img/go1-release.png 200 _
 - Now, 8 years of Go. Toward Go 2
-.play 01-backend-war/src/hello.go   
 
 * Feature Overview
 - Small and powerful standard library
@@ -122,6 +125,41 @@ Tags: go, golang, backend war, overview
 - No annotations
 - No constructors
 
+* OOP
+    type Animal struct {
+        Name string
+        mean bool
+    }
+
+    type Cat struct {
+        Basics Animal
+        MeowStrength int
+    }
+
+    type Dog struct {
+        Animal
+        BarkStrength int
+    }
+
+* Encapsulation
+- lowercase => private
+- uppercase => public
+- Method
+    func (dog *Dog) MakeNoise() {
+        fmt.Println("GUK GUK")
+    }
+- Constructor?
+
+    func NewDog() *Dog {
+        return &Dog{
+            Animal{
+            "Rover", // Name
+            false,   // mean
+            },
+            2, // BarkStrength
+        }
+    }
+
 * Who use go?
 - Google
 - Dropbox
@@ -134,3 +172,4 @@ Tags: go, golang, backend war, overview
 .image 01-backend-war/img/go-community.PNG
 
 * GopherMalangMeetup := nil
+.image 01-backend-war/img/gopher_round.png 600 _
