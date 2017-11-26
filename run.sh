@@ -1,1 +1,1 @@
-./talks -http localhost:5000 -orighost localhost
+go build && ./talks -http localhost:5000 -orighost localhost
