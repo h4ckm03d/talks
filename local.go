@@ -23,8 +23,8 @@ import (
 const basePkg = "github.com/h4ckm03d/talks"
 
 var (
-	httpAddr     = flag.String("http", ":"+os.Getenv("PORT"), "HTTP service address (e.g., '127.0.0.1:3999')")
-	originHost   = flag.String("orighost", "talks.cassavahq.com", "host component of web origin URL (e.g., 'localhost')")
+	httpAddr     = flag.String("http", "localhost:5000", "HTTP service address (e.g., '127.0.0.1:3999')")
+	originHost   = flag.String("orighost", "localhost", "host component of web origin URL (e.g., 'localhost')")
 	basePath     = flag.String("base", ".", "base path for slide template and static resources")
 	nativeClient = flag.Bool("nacl", false, "use Native Client environment playground (prevents non-Go code execution)")
 )
