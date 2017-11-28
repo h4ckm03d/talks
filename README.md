@@ -11,3 +11,5 @@ Forked from original go present with some modification to hide static and templa
 ## Developer Circle Malang
 
 1. Backend War
+
+> Notes: Logo and assets under License [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
