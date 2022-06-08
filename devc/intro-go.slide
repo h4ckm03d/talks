@@ -1,0 +1,196 @@
+Golang Introduction
+
+Moch Lutfi
+
+kapten.lufi@gmail.com
+https://lumochift.org
+
+
+Tags: go, golang, backend war, overview
+
+* Hello Gopher
+.play intro-go/src/hello.go   
+.image intro-go/img/gopher25.png 350 _
+
+* History
+- 2007 Start
+.image intro-go/img/mail.png _ 600
+- 2009 First Release
+.image intro-go/img/tweet.png 200 _
+
+* History (con't)
+
+- 2012 Version 1
+.image intro-go/img/go1-release.png 200 _
+- Now, 8 years of Go. Toward Go 2
+
+* Feature Overview
+- Small and powerful standard library
+- Garbage collected
+- Statically compile (or cross-compile!) and deploy almost anywhere
+- Super-fast compiles and single binary deploys
+- Language/standard library are UTF-8 native
+- Design and behavior of language/standard library is opinionated
+- Since v1.5, compiler toolchain is written in Go
+- Built in unit testing and benchmark
+- Easy integration with C code/libraries
+- Less-is-more!
+- Generic on v1.18
+
+* Package Management
+- Go codes grouped as "packages" in $GOPATH
+    $ ls $GOPATH
+      pkg src bin
+- $GOPATH directory layout
+    $GOPATH/src/X/Y/Z
+- Packages can be retrieved via go get
+    $ go get -u github.com/spf13/viper
+    X/Y/Z
+    X: github.com (can be any code version system)
+    Y: spf13
+    Z: viper
+- Local dependency with isolated environtment
+    go module
+
+* Performance
+- https://github.com/smallnest/go-web-framework-benchmark
+    api.Get("/rest/hello", func(c *XXXXX.Context) {
+    	sleepTime := strconv.Atoi(os.Args[1]) //10ms
+    	if sleepTime > 0 {
+    		time.Sleep(time.Duration(sleepTime) * time.Millisecond)
+    	}
+
+    	c.Text("Hello world")
+    })
+
+
+* Performance
+- the concurrency clients are 5000.
+.image intro-go/img/benchmark.png _ 800
+
+* Pipeline Performance
+.image intro-go/img/benchmark-pipeline.png _ 800
+
+* Memory usage
+- Allocs is the heap allocations by web servers when test is running. The unit is MB. The smaller is the better.
+.image intro-go/img/benchmark_alloc.png _ 800
+
+
+* Performance on real world
+.image intro-go/img/1millionreq.png _ 900
+.link https://medium.com/smsjunk/handling-1-million-requests-per-minute-with-golang-f70ac505fcaa https://medium.com/smsjunk/handling-1-million-requests-per-minute-with-golang-f70ac505fcaa
+
+* Developer Experience
+- Simple Language (25 keywords)
+- Opinionated
+- Warning is an error
+- No classes. Everything is divided into packages. Go has only structs.
+- No support for inheritance. 
+- No Execeptions
+- No generics -> Now supported since go 1.18
+- No annotations
+- No constructors
+
+* No Exceptions
+    type Server struct {}
+
+    func main() {
+        err := s.Run()
+    }
+
+    func (s *Server) Run() (err error) {
+        http.HandleFunc("/", s.handleHomeRequest)
+        err = http.ListenAndServe(":4000", nil)
+        if err != nil {
+            return err
+        }
+        return nil
+    }
+
+* Defer
+
+.play intro-go/src/defer.go  
+
+* Benchmark + testing
+- Test
+    func TestTimeConsuming(t *testing.T) {
+        if testing.Short() {
+            t.Skip("skipping test in short mode.")
+        }
+        ...
+    }
+- Benchmark
+    func BenchmarkHello(b *testing.B) {
+        for i := 0; i < b.N; i++ {
+            fmt.Sprintf("hello")
+        }
+    }
+
+* Benchmark + testing (2)
+- Fuzzing
+.image intro-go/img/gofuzz.png _ 800
+
+* Meet chan
+.play intro-go/src/channel.go
+
+* Pointer
+.play intro-go/src/pointers.go
+
+* Context
+.play intro-go/src/context.go
+
+* Context (2)
+    ┌─────────────┐                                                                
+    │ HTTPHandler │                                                                
+    └─────────────┘                                                                
+           │                                                                       
+           │                                                                       
+           │                                                                       
+           │                                                                       
+     ┌─────▼────┐          ┌──────────┐          ┌──────────┐          ┌──────────┐
+     │          │          │          │          │          │          │          │
+     │          │──────────▶          │──────────▶          │──────────▶          │
+     │  ┌─────┐ │          │ ┌─────┐  │          │ ┌─────┐  │          │┌─────┐   │
+     └──┤SVC A├─┘          └─┤SVC B├──┘          └─┤SVC C├──┘          └┤ DB  ├───┘
+        └─────┘              └─────┘               └─────┘              └─────┘    
+
+* Generic
+.play intro-go/src/generic.go
+
+* OOP
+    type Animal struct {
+        Name string
+        mean bool
+    }
+
+    type Cat struct {
+        Basics Animal
+        MeowStrength int
+    }
+
+    type Dog struct {
+        Animal
+        BarkStrength int
+    }
+
+* Encapsulation
+- lowercase => private
+- uppercase => public
+- Method
+    func (dog *Dog) MakeNoise() {
+        fmt.Println("GUK GUK")
+    }
+- Constructor?
+
+    func NewDog() *Dog {
+        return &Dog{
+            Animal{
+            "Rover", // Name
+            false,   // mean
+            },
+            2, // BarkStrength
+        }
+    }
+
+* Simple http Server
+.play intro-go/src/httpserver.go
