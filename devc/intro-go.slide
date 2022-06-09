@@ -6,7 +6,7 @@ kapten.lufi@gmail.com
 https://lumochift.org
 
 
-Tags: go, golang, backend war, overview
+Tags: go, golang, overview
 
 * Hello Gopher
 .play intro-go/src/hello.go   
@@ -22,7 +22,7 @@ Tags: go, golang, backend war, overview
 
 - 2012 Version 1
 .image intro-go/img/go1-release.png 200 _
-- Now, 8 years of Go. Toward Go 2
+- Now, Toward Go 2
 
 * Feature Overview
 - Small and powerful standard library
@@ -50,7 +50,7 @@ Tags: go, golang, backend war, overview
     Y: spf13
     Z: viper
 - Local dependency with isolated environtment
-    go module
+    go mod
 
 * Performance
 - https://github.com/smallnest/go-web-framework-benchmark
@@ -194,3 +194,17 @@ Tags: go, golang, backend war, overview
 
 * Simple http Server
 .play intro-go/src/httpserver.go
+
+* QA session
+
+* Weekly task #1
+
+https://classroom.github.com/a/zUILIifP
+
+- Buat 1 endpoint Rest API server dengan Go. (READ ALL, READ one, CREATE, UPDATE, DELETE)
+- Bisa CRUD data user, data produk, data transaksi atau yang lain. Bebas
+
+Syaratnya:
+- Memenuhi aturan Rest API
+- Gunakan Standard library tanpa library router 3rd party
+- Gunakan struktur data dasar untuk menyimpan data (in memory) tanpa database / persistence storage
